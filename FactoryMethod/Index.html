@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Exemplo de Factory Method em JavaScript</title>
+</head>
+
+<body>
+  <h1>Exemplo de Factory Method em JavaScript</h1>
+  <div id="output"></div>
+
+  <script src="factoryMethod.js"></script>
+  <script>
+    const pizzaFactory = new PizzaFactory();
+    const burgerFactory = new BurgerFactory();
+
+    const portuguesaPizza = pizzaFactory.createProduct('Portuguesa', 10.99);
+    const queijoPizza = pizzaFactory.createProduct('4 Queijos', 12.99);
+    const xsalada = burgerFactory.createProduct('X-salada', 8.99);
+    const xtudo = burgerFactory.createProduct('X-tudo', 10.99);
+
+    const output = document.getElementById('output');
+    const result = `${portuguesaPizza.getDescription()}<br>${queijoPizza.getDescription()}<br>${xsalada.getDescription()}<br>${xtudo.getDescription()}`;
+    output.innerHTML = result;
+  </script>
+</body>
+
+</html>

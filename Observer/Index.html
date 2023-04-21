@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Exemplo Observer em JavaScript</title>
+</head>
+
+<body>
+  <script src="Observer.js"></script>
+  <script>
+    const subject = new Subject();
+
+    const observer1 = new Observer(subject);
+    const observer2 = new Observer(subject);
+    const observer3 = new Observer(subject);
+
+    subject.notify(); // 'Mensagem recebida pelo Observer'
+  </script>
+</body>
+
+</html>
